@@ -49,7 +49,6 @@ app.listen(port, () => console.log(`Server running on port ${port}`), () => {
     mailUser(mailDay)
       .then((coworkers) => {
         let mailing = mailCreator(coworkers); // taking a poop here
-        console.log(mailing);
 
         for (let i = mailing.length - 1; i >= 0; i--) {
           mailSender(mailing[i].coworker, "Awesome Headline", mailing[i].email)
