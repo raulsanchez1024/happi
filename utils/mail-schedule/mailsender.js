@@ -1,17 +1,17 @@
-const mongoose = require("mongoose");
-let mailgun = require("mailgun-js");
 const Q = require("q");
 const keys = require("../../config/keys");
+let Mailgun = require("mailgun-js");
 
 module.exports = function mailSender(coworkerEmail, subject, html) {
   // Setup promises
   let deffered = Q.defer();
-  
+
   // Create new mailgun instance with credentials
-  let mailgun = new Mailgun({
+  mailgun = new Mailgun({
     apiKey: keys.mailgun_api,
     domain: keys.mailgun_domain
   });
+
 
   // Setup basic mail data
   let mailData = {
@@ -26,9 +26,9 @@ module.exports = function mailSender(coworkerEmail, subject, html) {
     if (err) {
       deffered.reject(console.log("failed: " + err));
     } else {
-      differed.resolve(body);
+      deffered.resolve(body);
     }
   });
 
   return deffered.promise;
-}
+};
