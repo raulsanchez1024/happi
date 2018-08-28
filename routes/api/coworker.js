@@ -146,7 +146,7 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     let data = {
-      from: "Raul <hi@raauul.com>",
+      from: `Raul <hi@raauul.com>`,
       to: "raulsanchez1024@gmail.com",
       subject: `Hello user: ${req.params.id}`,
       text: "Testing some Mailgun awesomness"
