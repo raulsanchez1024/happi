@@ -14,6 +14,8 @@ const Coworker = require("../../models/Coworker");
 // Load profile model
 const Profile = require("../../models/Profile");
 
+const mailScheduler = require("../../utils/mail-schedule/all");
+
 // Validation
 // const validateCoworkerInput = require("../../validation/coworker");
 
@@ -155,6 +157,25 @@ router.post(
     mailgun.messages().send(data, (error, body) => {
       console.log(body);
       res.json(body);
+    });
+  }
+);
+
+router.post(
+  "/mailgun",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    const data = {
+      from: "TEST <hi@raauul.com>",
+      to: "raulsanchez1024@gmail.com",
+      subject: `TESTING user: ${req.user.id}`,
+      text: "Testing some Mailgun awesomeness!",
+      html: "<button>HIHIHI</button>",
+      "o:deliverytime": new Date("2018-08-28T09:46:00Z").toUTCString()
+    };
+
+    mailgun.messages().send(data, (err, body) => {
+      console.log(body);
     });
   }
 );
