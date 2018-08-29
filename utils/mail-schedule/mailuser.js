@@ -1,10 +1,23 @@
 const Q = require("q");
+const axios = require("axios");
 
 // Load coworker model
 const Coworker = require("../../models/Coworker");
 
+const userId = "";
+
 module.exports = function mailUser(mailday) {
   console.log("Users fired");
+
+  // axios.get("http://localhost:5001/api/users/current")
+  // .then((res) => {
+  //   userId = res.id;
+  //   console.log(UserId);
+  // })
+  // .catch((err) => {
+  //   console.log(err);
+  // });
+  // console.log(userId);
 
   let deffered = Q.defer();
 

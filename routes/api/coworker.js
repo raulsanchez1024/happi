@@ -14,8 +14,6 @@ const Coworker = require("../../models/Coworker");
 // Load profile model
 const Profile = require("../../models/Profile");
 
-const mailScheduler = require("../../utils/mail-schedule/all");
-
 // Validation
 // const validateCoworkerInput = require("../../validation/coworker");
 

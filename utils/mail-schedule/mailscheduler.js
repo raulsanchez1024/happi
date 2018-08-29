@@ -4,8 +4,8 @@ module.exports = function mailScheduler(job) {
   // Set rules for scheduler
   let rule = new schedule.RecurrenceRule();
       rule.dayOfWeek = [new schedule.Range(0, 6)];
-      rule.hour = 16;
-      rule.minute = 40;
+      rule.hour = 9;
+      rule.minute = 57;
   
   schedule.scheduleJob(rule, job);
 }
