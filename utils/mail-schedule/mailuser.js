@@ -1,5 +1,4 @@
 const Q = require("q");
-const axios = require("axios");
 
 // Load coworker model
 const Coworker = require("../../models/Coworker");
@@ -8,6 +7,10 @@ const userId = "";
 
 module.exports = function mailUser(mailday) {
   console.log("Users fired");
+
+  console.log(userId);
+
+
 
   // axios.get("http://localhost:5001/api/users/current")
   // .then((res) => {
@@ -21,7 +24,9 @@ module.exports = function mailUser(mailday) {
 
   let deffered = Q.defer();
 
-  Coworker.find({ user: "5b7aeb3cf0861f453c279910" }).exec((err, coworker) => {
+  // 5b7aeb3cf0861f453c279910
+
+  Coworker.find({ user: userId }).exec((err, coworker) => {
     let coworkers = [];
 
     if (err) {
