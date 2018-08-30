@@ -40,6 +40,8 @@ const mailSender = require("./utils/mail-schedule/mailsender");
 
 const port = process.env.PORT || 5001;
 
+require("./utils/get/getuserid");
+
 app.listen(
   port,
   () => console.log(`Server running on port ${port}`),
