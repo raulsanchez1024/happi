@@ -1,13 +1,12 @@
 const axios = require("axios");
 
-module.exports = () => {
+module.exports = function getUserId() {
   let userId = "";
   axios
-    .get("/api/users/current")
+    .get("http://localhost:5001/api/users/current")
     .then((res) => {
-      console.log(res);
-      userId = res.id;
+      userId = res.data.id;
+      console.log(userId)
     })
     .catch(err => console.log(err));
-    return userId;
 };

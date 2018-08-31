@@ -4,11 +4,6 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const keys = require("../../config/keys");
 
-let mailgun = require("mailgun-js");
-const api_key = keys.mailgun_api;
-const DOMAIN = keys.mailgun_domain;
-mailgun = require("mailgun-js")({ apiKey: api_key, domain: DOMAIN });
-
 // Load coworker model
 const Coworker = require("../../models/Coworker");
 // Load profile model
@@ -16,11 +11,6 @@ const Profile = require("../../models/Profile");
 
 // Validation
 // const validateCoworkerInput = require("../../validation/coworker");
-
-// @route   GET api/coworker/test
-// @desc    Tests coworker route
-// @access  Public
-router.get("/test", (req, res) => res.json({ msg: "Coworker works" }));
 
 // @route   POST api/coworker/add
 // @desc    Create coworker
@@ -138,46 +128,5 @@ router.delete(
   }
 );
 
-// @route   POST api/coworker/qa/mailgun/:id
-// @desc    Sending dummy data to mailgun
-// @access  Private
-router.post(
-  "/qa/mailgun/:id",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    let data = {
-      from: `Raul <hi@raauul.com>`,
-      to: "raulsanchez1024@gmail.com",
-      subject: `Hello user: ${req.params.id}`,
-      text: "Testing some Mailgun awesomness"
-    };
-
-    mailgun.messages().send(data, (error, body) => {
-      console.log(body);
-      res.json(body);
-    });
-  }
-);
-
-router.post(
-  "/mailgun",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    const data = {
-      from: "TEST <hi@raauul.com>",
-      to: "raulsanchez1024@gmail.com",
-      subject: `TESTING user: ${req.user.id}`,
-      text: "Testing some Mailgun awesomeness!",
-      html: "<button>HIHIHI</button>",
-      "o:deliverytime": new Date("2018-08-28T09:46:00Z").toUTCString()
-    };
-
-    mailgun.messages().send(data, (err, body) => {
-      console.log(body);
-    });
-  }
-);
-
 module.exports = router;
 
-// updated
