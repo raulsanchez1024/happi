@@ -4,12 +4,12 @@ import Logo from "../../img/nav-logo.png";
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm mb-4">
+      <nav className="navbar navbar-expand-sm">
         <div className="container">
-          <img src={Logo} alt="happiworkplace" className="bavbar-brand" />
+          <img src={Logo} />
 
-          <div>
-            <ul className="navbar-nav mr-auto ul-nav">
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav ml-auto nav-right">
               <li className="nav-item">
                 <a href="/features">Features</a>
               </li>
@@ -19,11 +19,9 @@ class Navbar extends Component {
               <li className="nav-item">
                 <a href="/support">Support</a>
               </li>
-              <li>
-                <button className="hw-button">Login</button>
-              </li>
             </ul>
           </div>
+          <button className="hw-button nav-button">Login</button>
         </div>
       </nav>
     );

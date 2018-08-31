@@ -2,17 +2,27 @@
 .navbar {
   padding-top: 35px;
 }
-.nav-item {
-  padding-right: 75px;
+
+.nav-right {
+  padding-top: 10px;
 }
 
-.nav-item a {
-  color: #3d3d3d;
+.nav-right li a {
+  padding-right: 65px;
   font-family: "Montserrat";
   font-weight: 300;
+  color: #3d3d3d;
+}
+
+.nav-right li a:hover {
+  text-decoration: none;
+  color: #217cfb;
 }
 
 .hw-button {
+  position: relative;
+  height: 40px;
+  width: 100px;
   background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -20,4 +30,43 @@
   font-weight: 300;
 }
 
+.nav-button {
+  margin-top: 10px;
+}
+
 /* === Landing === */
+
+.landing {
+  font-family: "Montserrat";
+}
+
+p.hero-p {
+  margin-left: 300px;
+  margin-right: 300px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.hero {
+  margin-top: 150px;;
+}
+
+.hero-h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.trial-button {
+  position: relative;
+  height: 40px;
+  width: 115px;
+  background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
