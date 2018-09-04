@@ -15,19 +15,19 @@ class Landing extends Component {
             better and improve workplace environment through employee feedback.
           </p>
           <div className="d-flex flex-row justify-content-center justify-content-md-center">
-            <input type="text" name="" />
-            <button>Try it FREE</button>
+            <input type="text" placeholder="Your email" />
+            <button className="trial-btn">Try it FREE</button>
           </div>
         </div>
 
         <div className="diduknow d-flex align-items-center">
-          <h3 className="container d-flex justify-content-center">
+          <h3 className="container d-flex justify-content-center d3">
             Did you know happy salespeople produce 37% greater sales?
           </h3>
         </div>
 
         <div className="value d-flex flex-column container">
-          <h3 className="text-center mt-5">
+          <h3 className="text-center">
             How will HappiWorkplace help your business?
           </h3>
           <p className="whatwedo text-center mt-4">
@@ -59,7 +59,7 @@ class Landing extends Component {
                 <h3>Ready to get started?</h3>
               </div>
               <div className="ml-auto">
-                <button>Get it FREE</button>
+                <button className="mr-4">Get it FREE</button>
                 <button>Contact Sales</button>
               </div>
             </div>
