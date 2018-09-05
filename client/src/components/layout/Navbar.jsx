@@ -6,9 +6,14 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm">
         <div className="container">
-          <img src={Logo} />
+          <a href="/"><img src={Logo} className="navbar-brand" /></a>
+          
+          <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mobile-nav">
+            <i className="fa fa-bars"></i>
+          </button>
+          
 
-          <div className="collapse navbar-collapse">
+          <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav ml-auto nav-right">
               <li className="nav-item">
                 <a href="/features">Features</a>
@@ -20,8 +25,8 @@ class Navbar extends Component {
                 <a href="/support">Support</a>
               </li>
             </ul>
+            <button href="/login" className="hw-button nav-button">Login</button>
           </div>
-          <button className="hw-button nav-button">Login</button>
         </div>
       </nav>
     );

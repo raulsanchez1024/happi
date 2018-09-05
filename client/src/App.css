@@ -2,6 +2,7 @@
 
 ::selection {
   background: #bf7ef4;
+  color: white;
 }
 
 body {
@@ -92,16 +93,78 @@ input {
 
 .value {
   margin-top: 75px;
+  font-weight: 100;
 }
 
 /* === Footer === */
 
 .arc {
-   width: 100%;
+  width: 100%;
   margin-bottom: -12px;
+}
+
+hr {
+  margin-top: 50px;
 }
 
 .footer {
   background-color: #e3e3e3;
   padding-bottom: 5px;
+}
+
+.contact-btn {
+  height: 40px;
+  width: 125px;
+  margin-left: -1px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  font-weight: 100;
+}
+
+.footer-p {
+  color: #adadad;
+}
+
+@media (max-width: 800px) {
+  input {
+    width: 55%
+  }
+  .d3 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .arc {
+    margin-bottom: -2px;
+  }
+  .footer h3 {
+    font-size: 25px;
+  }
+  .nav-right {
+    padding-top: 5px;
+  }
+  .footer h3 {
+    margin-top: 10px;
+  }
+  .contact-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-right {
+    padding-right: 0px;
+  }
+  .nav-right li a {
+    padding-right: 15px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: #3d3d3d;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+  .arc {
+    margin-bottom: -6px;
+  }
 }

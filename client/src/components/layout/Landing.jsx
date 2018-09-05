@@ -59,18 +59,18 @@ class Landing extends Component {
                 <h3>Ready to get started?</h3>
               </div>
               <div className="ml-auto">
-                <button className="mr-4">Get it FREE</button>
-                <button>Contact Sales</button>
+                <button className="mr-4 trial-btn">Try it FREE</button>
+                <button className="contact-btn">Contact Sales</button>
               </div>
             </div>
 
             <hr />
 
             <div className="container d-flex flex-row">
-              <div className="mr-auto">
-                <p>Made in Denver 💙</p>
+              <div className="mr-auto footer-p">
+                <p>Made w/ 💙 in Denver, CO</p>
               </div>
-              <div className="ml-auto">
+              <div className="ml-auto footer-p">
                 <p>© HappiWorkplace 2018</p>
               </div>
             </div>
