@@ -25,7 +25,7 @@ class Navbar extends Component {
                 <a href="/support">Support</a>
               </li>
             </ul>
-            <button href="/login" className="hw-button nav-button">Login</button>
+            <a href="/login"><button className="hw-button nav-button">Login</button></a>
           </div>
         </div>
       </nav>
@@ -34,5 +34,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-// Hi – bug fixer

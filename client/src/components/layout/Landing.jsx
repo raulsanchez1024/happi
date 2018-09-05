@@ -15,7 +15,7 @@ class Landing extends Component {
             better and improve workplace environment through employee feedback.
           </p>
           <div className="d-flex flex-row justify-content-center justify-content-md-center">
-            <input type="text" placeholder="Your email" className="pl-2" />
+            <input type="text" placeholder="Your email" className="pl-2 input-try" name="email" />
             <button className="trial-btn">Try it FREE</button>
           </div>
         </div>
@@ -59,7 +59,7 @@ class Landing extends Component {
                 <h3>Ready to get started?</h3>
               </div>
               <div className="ml-auto">
-                <button className="mr-4 trial-btn">Try it FREE</button>
+                <button className="mr-4 trial-btn-2">Try it FREE</button>
                 <button className="contact-btn">Contact Sales</button>
               </div>
             </div>

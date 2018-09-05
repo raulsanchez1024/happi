@@ -40,6 +40,19 @@ body {
   color: #fff;
   font-family: "Montserrat";
   font-weight: 100;
+  border-radius: 25px;
+}
+
+.hw-button:hover {
+  position: relative;
+  height: 40px;
+  width: 100px;
+  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 100;
+  border-radius: 25px;
 }
 
 .nav-button {
@@ -60,9 +73,16 @@ body {
   text-align: center;
 }
 
-input {
+.input-try {
   width: 25%;
   border: 1px solid #3d3d3d;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  outline: none;
+}
+
+.input-try:focus {
+  outline: none;
 }
 
 .trial-btn {
@@ -73,6 +93,22 @@ input {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 100;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.trial-btn:hover {
+  height: 40px;
+  width: 115px;
+  margin-left: -1px;
+  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 100;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.trial-btn:focus {
+  outline: none;
 }
 
 /* === Did You Know === */
@@ -120,14 +156,37 @@ hr {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: black;
   font-weight: 100;
+  border-radius: 25px;
 }
 
 .footer-p {
   color: #adadad;
 }
 
+.trial-btn-2 {
+  height: 40px;
+  width: 115px;
+  margin-left: -1px;
+  background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 100;
+  border-radius: 25px;
+}
+
+.trial-btn-2:hover {
+  height: 40px;
+  width: 115px;
+  margin-left: -1px;
+  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 100;
+  border-radius: 25px;
+}
+
 @media (max-width: 800px) {
-  input {
+  .input-try {
     width: 55%
   }
   .d3 {
@@ -176,6 +235,7 @@ hr {
   background-color: #e8e8e8;
   margin: auto;
   margin-top: 150px;
+  border-radius: 3px;
 }
 
 .login-hr {
@@ -193,6 +253,7 @@ hr {
   color: #fff;
   font-weight: 100;
   height: 40px;
+  border-radius: 25px;
 }
 
 .account-login {
@@ -203,4 +264,14 @@ hr {
 .login-hr {
   margin: auto;
   width: 55%;
+}
+
+.input-login {
+  border-radius: 25px;
+  border: 1px black solid;
+  outline: none;
+}
+
+.input-login:hover {
+  outline: none;
 }

@@ -13,13 +13,13 @@ class Login extends Component {
             <input
               type="text"
               name="email"
-              className="login-input pl-2"
+              className="login-input pl-2 input-login"
               placeholder="Email"
             />
             <input
               type="text"
               name="password"
-              className="login-input mt-4 pl-2"
+              className="login-input mt-4 pl-2 input-login"
               placeholder="Password"
             />
             <button className="mt-4 login-btn-login">Login to your account</button>
@@ -32,5 +32,3 @@ class Login extends Component {
 }
 
 export default Login;
-
-// Updated login component
