@@ -15,7 +15,7 @@ class Landing extends Component {
             better and improve workplace environment through employee feedback.
           </p>
           <div className="d-flex flex-row justify-content-center justify-content-md-center">
-            <input type="text" placeholder="Your email" />
+            <input type="text" placeholder="Your email" className="pl-2" />
             <button className="trial-btn">Try it FREE</button>
           </div>
         </div>
