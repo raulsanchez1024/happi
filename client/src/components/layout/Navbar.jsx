@@ -24,8 +24,8 @@ class Navbar extends Component {
               <li className="nav-item">
                 <a href="/support">Support</a>
               </li>
+              <a href="/login" className="login-btn mt-2">Login</a>
             </ul>
-            <a href="/login"><button className="hw-button nav-button">Login</button></a>
           </div>
         </div>
       </nav>

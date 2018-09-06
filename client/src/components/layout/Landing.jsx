@@ -24,7 +24,7 @@ class Landing extends Component {
               className="pl-2 input-try"
               name="email"
             />
-            <button className="trial-btn">Try it FREE</button>
+            <a href="/register" className="trial-btn"><span>Try it FREE</span></a>
           </div>
         </div>
 
@@ -60,23 +60,15 @@ class Landing extends Component {
         </div>
 
         <div>
-          <img src={Arc} alt="arc" className="arc" />
+          
           <div className="footer">
-            <div className="container d-flex flex-row">
-              <div className="mr-auto">
-                <h3 className="ready-to-get">Ready to get started?</h3>
-              </div>
-              <div className="ml-auto">
-                <button className="mr-4 trial-btn-2">Try it FREE</button>
-                <button className="contact-btn">Contact Sales</button>
-              </div>
-            </div>
+            
 
             <hr />
 
             <div className="container d-flex flex-row">
               <div className="mr-auto footer-p">
-                <p>Made w/ 💙 in Denver, CO</p>
+                <p>Made with 💙 in Denver, CO</p>
               </div>
               <div className="ml-auto footer-p">
                 <p>© HappiWorkplace 2018</p>

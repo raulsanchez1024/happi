@@ -30,33 +30,13 @@ body {
   color: #3d3d3d;
 }
 
+li.nav-item {
+  padding-top: 15px;
+}
+
 .nav-right li a:hover {
   text-decoration: none;
   color: #217cfb;
-}
-
-.hw-button {
-  position: relative;
-  height: 40px;
-  width: 100px;
-  background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-family: "Montserrat";
-  font-weight: 100;
-  border-radius: 25px;
-}
-
-.hw-button:hover {
-  position: relative;
-  height: 40px;
-  width: 100px;
-  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-family: "Montserrat";
-  font-weight: 100;
-  border-radius: 25px;
 }
 
 .nav-button {
@@ -99,22 +79,16 @@ body {
   width: 115px;
   margin-left: -1px;
   background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 100;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+  text-align: center;
+  padding-top: 8px;
 }
 .trial-btn:hover {
-  height: 40px;
-  width: 115px;
-  margin-left: -1px;
-  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-weight: 100;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  text-decoration: none;
+  color: white;
 }
 .trial-btn:focus {
   outline: none;
@@ -142,11 +116,6 @@ body {
 }
 
 /* === Footer === */
-
-.arc {
-  width: 100%;
-  margin-bottom: -12px;
-}
 
 hr {
   margin-top: 50px;
@@ -182,21 +151,38 @@ hr {
   width: 115px;
   margin-left: -1px;
   background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 100;
   border-radius: 25px;
+  text-align: center;
+  padding-top: 8px;
 }
 
 .trial-btn-2:hover {
-  height: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+.login-btn {
   width: 115px;
-  margin-left: -1px;
+  height: 40px;
   background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-weight: 100;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
   border-radius: 25px;
+  font-weight: 100;
+}
+
+.login-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.ready-btn2 {
+  width: 115px;
+  height: 40px;
+  background-color: white;
 }
 
 @media (max-width: 800px) {
@@ -211,17 +197,11 @@ hr {
     font-size: 15px;
     text-align: center;
   }
-  .arc {
-    margin-bottom: -2px;
-  }
   .footer h3 {
     font-size: 25px;
   }
   .nav-right {
     padding-top: 5px;
-  }
-  .footer h3 {
-    margin-top: 10px;
   }
   .contact-btn {
     margin-top: 10px;
@@ -238,11 +218,15 @@ hr {
     font-weight: 300;
     color: #3d3d3d;
   }
-  .footer {
-    padding-top: 30px;
-  }
-  .arc {
-    margin-bottom: -6px;
+  .login-btn {
+    width: 115px;
+    height: 40px;
+    background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 25px;
+    font-weight: 100;
   }
 }
 
