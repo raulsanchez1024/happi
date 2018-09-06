@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Arc from "../../img/lolol.png";
+import React, { Component } from 'react';
+import Arc from '../../img/lolol.png';
 
 class Landing extends Component {
   render() {
@@ -9,20 +9,28 @@ class Landing extends Component {
           <h1 className="d-flex justify-content-center justify-content-md-center text-center">
             Unlock valuable feedback
           </h1>
-          <p className="lead hero-p">
-            <span className="bold">HappiWorkplace</span> is a web application
-            that helps business owners and managers get to know their employees
-            better and improve workplace environment through employee feedback.
-          </p>
+          <div className="hero-div">
+            <p className="lead hero-p">
+              <span className="bold">HappiWorkplace</span> is a web application
+              that helps business owners and managers get to know their
+              employees better and improve workplace environment through
+              employee feedback.
+            </p>
+          </div>
           <div className="d-flex flex-row justify-content-center justify-content-md-center">
-            <input type="text" placeholder="Your email" className="pl-2 input-try" name="email" />
+            <input
+              type="text"
+              placeholder="Your email"
+              className="pl-2 input-try"
+              name="email"
+            />
             <button className="trial-btn">Try it FREE</button>
           </div>
         </div>
 
         <div className="diduknow d-flex align-items-center">
           <h3 className="container d-flex justify-content-center d3">
-            Did you know happy salespeople produce 37% greater sales?
+            Did you know that happy employees outperform the competition by 20%?
           </h3>
         </div>
 
@@ -56,7 +64,7 @@ class Landing extends Component {
           <div className="footer">
             <div className="container d-flex flex-row">
               <div className="mr-auto">
-                <h3>Ready to get started?</h3>
+                <h3 className="ready-to-get">Ready to get started?</h3>
               </div>
               <div className="ml-auto">
                 <button className="mr-4 trial-btn-2">Try it FREE</button>
