@@ -248,6 +248,10 @@ hr {
   padding-bottom: 25px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .login-input {
   border-radius: 25px;
   border: 1px #adadad solid;
