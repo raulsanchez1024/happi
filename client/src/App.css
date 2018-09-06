@@ -233,47 +233,48 @@ hr {
 /* === Login === */
 .sqr {
   width: 350px;
-  height: 300px;
-  background-color: #e8e8e8;
+  height: 375px;
+  border: 1px #adadad solid;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 125px;
   border-radius: 3px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.login-hr {
-  margin: 0;
+.login-p {
+  font-weight: 100;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 .login-input {
+  border-radius: 25px;
+  border: 1px #adadad solid;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.login-input:focus {
+  outline: none;
+}
+
+.login-btn2 {
   width: 100%;
-  height: 40px;
-}
-
-.login-btn-login {
-  background: linear-gradient(256.76deg, #bf7ef4 0%, #217cfb 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  height: 50px;
+  background: linear-gradient(256.76deg, #217cfb 0%, #bf7ef4 100%);
+  color: white;
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 25px;
   font-weight: 100;
-  height: 40px;
-  border-radius: 25px;
 }
 
-.account-login {
-  font-size: 11px;
-  color: #3d3d3d;
+.login-btn2:hover {
+  text-decoration: none;
+  color: white;
 }
 
-.login-hr {
-  margin: auto;
-  width: 55%;
-}
-
-.input-login {
-  border-radius: 25px;
-  border: 1px black solid;
-  outline: none;
-}
-
-.input-login:hover {
-  outline: none;
+.forgot-p {
+  font-size: 10px;
 }

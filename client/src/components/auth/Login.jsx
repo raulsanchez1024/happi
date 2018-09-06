@@ -1,31 +1,31 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Login extends Component {
   render() {
     return (
       <div className="login container">
         <div className="sqr container">
-          <p className="text-center justify-content-center pt-4">
-            Welcome back!
-          </p>
-          <hr className="login-hr" />
-          <div className="d-flex flex-column mt-4">
+          <p className="text-center login-p">Welcome back!</p>
+          <div className="d-flex flex-column">
             <input
               type="text"
               name="email"
-              className="login-input pl-2 input-login"
+              className="login-input pl-2"
               placeholder="Email"
             />
             <input
-              type="text"
+              type="password"
               name="password"
-              className="login-input mt-4 pl-2 input-login"
+              className="login-input pl-2"
               placeholder="Password"
             />
-            <button className="mt-4 login-btn-login">Login to your account</button>
-            <p className="text-center mt-2 account-login">Don't have an account? Sign up <a href="/sign-up">here</a></p>
+            <a href="/login" className="login-btn2">
+              Login to your account
+            </a>
+            <a href="/forgot" className="pt-2 text-center forgot-p">Forgot your password?</a>
           </div>
         </div>
+        <p className="text-center pt-3 forgot-p">Don't have an account yet?<a href="/register"> Register now!</a></p>
       </div>
     );
   }
