@@ -8,6 +8,9 @@ import { clearCurrentProfile } from './actions/profileActions';
 import { Provider } from "react-redux";
 import store from "./store";
 
+import PrivateRoute from './components/common/PrivateRoute';
+
+import Dashboard from "./components/dashboard/Dashboard.jsx";
 import Landing from "./components/layout/Landing.jsx";
 import Login from "./components/auth/Login.jsx";
 import Navbar from "./components/layout/Navbar.jsx";
@@ -44,6 +47,9 @@ class App extends Component {
             <Navbar />
             <Route path="/" exact component={Landing} />
             <Route path="/login" exact component={Login} />
+            <Switch>
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            </Switch>
           </div>
         </Router>
       </Provider>
