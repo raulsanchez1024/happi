@@ -94,6 +94,11 @@ li.nav-item {
   outline: none;
 }
 
+.trial-p {
+  font-size: 11px;
+  color: #adadad;
+}
+
 /* === Did You Know === */
 
 .diduknow {

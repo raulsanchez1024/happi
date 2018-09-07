@@ -36,7 +36,7 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto nav-right">
         <li className="nav-item">
-          <a href="/features">Features</a>
+          <a href="/demo">Demo</a>
         </li>
         <li className="nav-item">
           <a href="/pricing">Pricing</a>

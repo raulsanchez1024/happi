@@ -26,6 +26,7 @@ class Landing extends Component {
             />
             <a href="/register" className="trial-btn"><span>Try it FREE</span></a>
           </div>
+          <p className="text-center trial-p mt-2">Free 13-day trial • No CC required • Cancel anytime</p>
         </div>
 
         <div className="diduknow d-flex align-items-center">
