@@ -98,5 +98,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { loginUser })(Login);
-
-// Updated login component
