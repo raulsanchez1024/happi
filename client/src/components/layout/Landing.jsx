@@ -1,6 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { PropTypes } from "prop-types";
+import { connect } from "react-redux";
 
 class Landing extends Component {
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
+
   render() {
     return (
       <div className="landing">
@@ -23,9 +32,13 @@ class Landing extends Component {
               className="pl-2 input-try"
               name="email"
             />
-            <a href="/register" className="trial-btn"><span>Try it FREE</span></a>
+            <a href="/register" className="trial-btn">
+              <span>Try it FREE</span>
+            </a>
           </div>
-          <p className="text-center trial-p mt-2">Free 13-day trial • No CC required • Cancel anytime</p>
+          <p className="text-center trial-p mt-2">
+            Free 13-day trial • No CC required • Cancel anytime
+          </p>
         </div>
 
         <div className="diduknow d-flex align-items-center">
@@ -68,15 +81,14 @@ class Landing extends Component {
               className="pl-2 input-try"
               name="email"
             />
-            <a href="/register" className="trial-btn"><span>Try it FREE</span></a>
+            <a href="/register" className="trial-btn">
+              <span>Try it FREE</span>
+            </a>
           </div>
         </div>
 
         <div>
-          
           <div className="footer">
-            
-
             <hr />
 
             <div className="container d-flex flex-row">
@@ -94,4 +106,12 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+Landing.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(Landing);
