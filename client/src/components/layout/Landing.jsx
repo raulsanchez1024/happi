@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Arc from '../../img/lolol.png';
 
 class Landing extends Component {
   render() {
@@ -20,7 +19,7 @@ class Landing extends Component {
           <div className="d-flex flex-row justify-content-center justify-content-md-center">
             <input
               type="text"
-              placeholder="Your email"
+              placeholder="Enter your email"
               className="pl-2 input-try"
               name="email"
             />
@@ -58,6 +57,19 @@ class Landing extends Component {
           <p className="whatwedo text-center">
             5. Gain insights that lead to real changes on day-to-day opertaions.
           </p>
+        </div>
+
+        <div className="get-it-free">
+          <h3 className="text-center pb-2 ">Ready to get started?</h3>
+          <div className="d-flex flex-row justify-content-center justify-content-md-center">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              className="pl-2 input-try"
+              name="email"
+            />
+            <a href="/register" className="trial-btn"><span>Try it FREE</span></a>
+          </div>
         </div>
 
         <div>
