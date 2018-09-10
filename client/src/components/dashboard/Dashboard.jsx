@@ -6,6 +6,8 @@ import { getCurrentProfile } from "../../actions/profileActions";
 import ProfileActions from "./ProfileActions";
 import Spinner from "../common/Spinner.jsx";
 
+import "./Dashboard.css";
+
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
@@ -41,10 +43,11 @@ class Dashboard extends Component {
         // User is logged in but has no profile
         dashboardContent = (
           <div>
+            <h3>Setup your preferances</h3>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
+            <p>You have not yet setup your preferances, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+              Create Preferances
             </Link>
           </div>
         );
@@ -52,12 +55,10 @@ class Dashboard extends Component {
     }
 
     return (
-      <div className="dashboard">
+      <div className="dashboard d-flex flex-row">
         <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              {dashboardContent}
-            </div>
+          <div>
+            {dashboardContent}
           </div>
         </div>
       </div>
