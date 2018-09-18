@@ -43,7 +43,7 @@ class Dashboard extends Component {
         // User is logged in but has no profile
         dashboardContent = (
           <div>
-            <h3>Welcome to HappiWorkplace!</h3>
+            <h3>Setup your preferences!</h3>
             <p className="lead text-muted">Welcome {user.name}</p>
             <p>You have not yet setup your preferances, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
