@@ -3,7 +3,7 @@ const Q = require("q");
 // Load coworker model
 const Coworker = require("../../models/Coworker");
 
-module.exports = function mailUser(mailday) {
+module.exports = function mailUser() {
   console.log("Users fired");
 
   let deffered = Q.defer();

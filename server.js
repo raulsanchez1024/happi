@@ -33,11 +33,58 @@ app.use("/api/users", users);
 app.use("/api/profile", profile);
 app.use("/api/coworker", coworker);
 
-const mailScheduler = require("./utils/mail-schedule/mailscheduler");
-const mailUser = require("./utils/mail-schedule/mailuser");
-const mailCreator = require("./utils/mail-schedule/mailcreator");
-const mailSender = require("./utils/mail-schedule/mailsender");
+
+function send(mailScheduler, mailUser, mailCreator, mailSender) {
+  mailScheduler = require("./utils/mail-schedule/mailscheduler");
+  mailUser = require("./utils/mail-schedule/mailuser");
+  mailCreator = require("./utils/mail-schedule/mailcreator");
+  mailSender = require("./utils/mail-schedule/mailsender");
+
+  console.log("func is fired");
+  mailScheduler(() => {
+    mailUser().then(coworkers => {
+      console.log("j");
+      let mailing = mailCreator(coworkers);
+
+      console.log(mailing);
+
+      for (let i = mailing.length - 1; i >= 0; i--) {
+        mailSender(mailing[i].coworker, "Awesome Headline", mailing[i].tmp)
+          .then(res => {
+            console.log(res);
+          })
+          .catch(err => console.log("error: " + err));
+      }
+    });
+  });
+}
+
+send();
 
 const port = process.env.PORT || 5001;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+// app.listen(
+//   port,
+//   () => console.log(`Server running on port ${port}`),
+//   () => {
+//     console.log("func is fired");
+//     mailScheduler(() => {
+//       mailUser().then(coworkers => {
+//         console.log("J");
+//         let mailing = mailCreator(coworkers); // taking a poop here
+
+//         console.log(mailing);
+
+//         for (let i = mailing.length - 1; i >= 0; i--) {
+//           mailSender(mailing[i].coworker, "Awesome Headline", mailing[i].tmp)
+//             .then(res => {
+//               console.log(res);
+//             })
+//             .catch(err => console.log("error: " + err));
+//         }
+//       });
+//     });
+//   }
+// );
